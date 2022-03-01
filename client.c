@@ -7,6 +7,9 @@
 #include <netinet/tcp.h>
 #include <netdb.h>
 #include <errno.h>
+#include <stdlib.h>
+#include <strings.h>
+#include <unistd.h>
 
 #undef MIN
 #define MIN(a, b) (((a) < (b)) ? (a) : (b));

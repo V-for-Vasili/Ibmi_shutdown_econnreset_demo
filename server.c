@@ -5,6 +5,9 @@
 #include <netinet/tcp.h>
 #include <arpa/inet.h>
 #include <errno.h>
+#include <stdlib.h>
+#include <strings.h>
+#include <unistd.h>
 
 #undef MIN
 #define MIN(a, b) (((a) < (b)) ? (a) : (b));
@@ -13,7 +16,8 @@
 
 int main(int argc, char *argv[])
 {
-    int sock, newsockfd, clilen;
+    int sock, newsockfd;
+    socklen_t clilen;
     struct sockaddr_in cli_addr, serv_addr;
     int port;
     char buf[74];
