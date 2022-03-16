@@ -90,8 +90,6 @@ int main(int argc, char *argv[])
         }
     }
 
-    sleep(1);
-
     while (1)
     {
         do
